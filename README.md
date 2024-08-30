@@ -1,7 +1,7 @@
 # types-aioboto3
 
 [![PyPI - types-aioboto3](https://img.shields.io/pypi/v/types-aioboto3.svg?color=blue&label=types-aioboto3)](https://pypi.org/project/types-aioboto3)
-[![PyPI - aiobotocore](https://img.shields.io/pypi/v/aiobotocore.svg?color=blue&label=aiobotocore)](https://pypi.org/project/aiobotocore)
+[![PyPI - aioboto3](https://img.shields.io/pypi/v/aioboto3.svg?color=blue&label=aioboto3)](https://pypi.org/project/aioboto3)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/types-aioboto3.svg?color=blue)](https://pypi.org/project/types-aioboto3)
 [![PyPI - Downloads](https://static.pepy.tech/badge/types-aioboto3)](https://pepy.tech/project/types-aioboto3)
 
