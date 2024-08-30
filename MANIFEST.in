@@ -1,0 +1,4 @@
+include aioboto3-stubs/py.typed
+include aioboto3-stubs/*.pyi
+include aioboto3-stubs/*/*.pyi
+include aioboto3-stubs/*/*/*.pyi

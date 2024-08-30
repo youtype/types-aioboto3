@@ -1,0 +1,8 @@
+packages:
+  - name: aioboto3
+    path: ./aioboto3-stubs
+    checks:
+      flake8: false
+      pyright: false
+      mypy: false
+      stubtest: true
