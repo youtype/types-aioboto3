@@ -19,7 +19,7 @@ on:
 
 env:
   PACKAGE: aioboto3
-  STUBS: types-aioboto3-lite
+  STUBS: types-aioboto3
 
 jobs:
   check-version:
@@ -35,10 +35,10 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const { setupGlobals, extractVersions } = require('./.github/workflows/helpers.js')
+            const { setupGlobals, extractLocalVersions } = require('./.github/workflows/helpers.js')
 
             setupGlobals({ fetch, core, context })
-            await extractVersions()
+            await extractLocalVersions()
 
   publish-stubs:
     name: Publish stubs

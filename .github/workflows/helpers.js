@@ -92,7 +92,33 @@ async function extractVersions() {
     core.setOutput('stubs-version', buildStubsVersion)
 }
 
+async function extractLocalVersions() {
+    core.setOutput('stubs-version', '')
+    const package = process.env.PACKAGE
+    const stubsPackage = process.env.STUBS
+
+    const inputVersion = context.payload.inputs?.version
+    const version = inputVersion ? inputVersion : await getLatestVersion(package)
+    core.notice(`${package} version = ${version}`)
+
+    const { readFileSync } = require('fs')
+    const lines = readFileSync('./pyproject.toml', 'utf8').split('\n')
+    const stubsVersion = lines.filter(x => x.startsWith('version = '))[0].split('"')[1]
+    core.notice(`${stubsPackage} latest version = ${stubsVersion}`)
+
+    if (!isStableVersionGreater(version, stubsVersion)) {
+        core.notice(`Version ${version} is not greater that stubs ${stubsVersion}, skipping run`)
+        return
+    }
+
+    core.notice(`New ${package} version found: ${version}`)
+    core.notice(`${stubsPackage} build version = ${version}`)
+    core.setOutput('version', version)
+    core.setOutput('stubs-version', version)
+}
+
 module.exports = {
     setupGlobals,
-    extractVersions
+    extractVersions,
+    extractLocalVersions
 }
