@@ -70,7 +70,7 @@ class Session:
         aws_secret_access_key: Optional[str] = ...,
         aws_session_token: Optional[str] = ...,
         config: Optional[AioConfig] = ...,
-    ) -> AIOBoto3ServiceResource: ...
+    ) -> ResourceCreatorContext[AIOBoto3ServiceResource]: ...
 
 _AIOBoto3ServiceResource = TypeVar("_AIOBoto3ServiceResource", bound=AIOBoto3ServiceResource)
 
