@@ -26,6 +26,7 @@ classifiers = [
     "Typing :: Stubs Only",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+dependencies = ["typing-extensions; python_version < '3.12'"]
 
 [tool.uv]
 config-settings = { editable-mode = "strict" }
