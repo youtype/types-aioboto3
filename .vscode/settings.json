@@ -2,6 +2,15 @@
     "[python]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "charliermarsh.ruff",
-        "ruff.nativeServer": "on",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "files.exclude": {
+        ".venv": true,
+        ".mypy_cache": true,
+        ".ruff_cache": true,
+        "*.egg-info": true,
+        "build": true,
     }
 }
