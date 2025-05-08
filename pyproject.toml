@@ -1,6 +1,6 @@
 [project]
 name = "types-aioboto3"
-version = "14.2.0"
+version = "14.3.0"
 requires-python = ">=3.8"
 description = "Type annotations and code completion for aiobotocore"
 authors = [{ name = "Vlad Emelianov", email = "vlad.emelianov.nz@gmail.com" }]
