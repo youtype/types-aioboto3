@@ -2223,7 +2223,7 @@ wheels = [
 
 [[package]]
 name = "types-aioboto3"
-version = "14.1.0"
+version = "15.2.0"
 source = { editable = "." }
 dependencies = [
     { name = "typing-extensions", version = "4.13.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
