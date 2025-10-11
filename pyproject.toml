@@ -30,7 +30,9 @@ dependencies = ["typing-extensions; python_version < '3.12'"]
 
 [tool.uv]
 config-settings = { editable-mode = "strict" }
-dev-dependencies = [
+
+[dependency-groups]
+dev = [
     "setuptools",
     "aioboto3",
     "mypy",
